@@ -1,6 +1,78 @@
-$primary-color: #444;
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+//Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  //nesting with sass &.lg-heading same as h1.lg-heading
+  &.lg-heading {
+    //default 16px so 6rem is 16*6 =96px em would take the font-size from the parent element where as rem is the html body
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    //0.2rem top and bottom, 1rem left and right
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  //always want the header at top, using position fixed.
+  position: fixed;
+  //z-index so it is always up front
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    //we don't want scroll bars
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }
