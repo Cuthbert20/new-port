@@ -9,7 +9,7 @@
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -77,4 +77,12 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
 }
