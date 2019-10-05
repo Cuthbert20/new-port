@@ -1,7 +1,7 @@
-$primary-color: rgb(197, 192, 192);
+$primary-color: rgb(41, 40, 40);
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url("https://res.cloudinary.com/cuthbert20/image/upload/v1570227077/safar-safarov-MSN8TFhJ0is-unsplash_c8nnei.jpg");
 $background-opacity: 0.9;
 
 @mixin easeOut {

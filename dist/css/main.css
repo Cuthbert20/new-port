@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #fff;
     transition: all 0.7s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -39,14 +39,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: rbga(#b9b3b3, 0.9);
+    background: rbga(#1c1b1b, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.7s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: rgba(197, 192, 192, 0.9);
+    background: rgba(41, 40, 40, 0.9);
     transform: translate3d(0, 100%, 0);
     transition: all 0.7s ease-out; }
     .menu-branding.show {
@@ -72,7 +72,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     transition: all 0.7s ease-out; }
     .menu .nav-link:hover {
@@ -125,14 +125,14 @@
   box-sizing: border-box; }
 
 body {
-  background: #c5c0c0;
-  color: #000;
+  background: #292828;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url("https://res.cloudinary.com/cuthbert20/image/upload/v1570227077/safar-safarov-MSN8TFhJ0is-unsplash_c8nnei.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -143,7 +143,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(197, 192, 192, 0.9); }
+      background: rgba(41, 40, 40, 0.9); }
 
 h1,
 h2,
@@ -159,7 +159,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(202, 197, 197, 0.5); }
+    background: rgba(46, 45, 45, 0.5); }
 
 a {
   color: #fff;
@@ -190,5 +190,24 @@ main {
 
 .about-info {
   display: grid;
+  grid-gap: 30px;
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #eece1a 3px solid; }
+
+.bio {
+  grid-area: bio; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
