@@ -181,6 +181,9 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
+.date {
+  letter-spacing: 0.1rem; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
