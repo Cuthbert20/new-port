@@ -122,6 +122,56 @@ main {
   }
 }
 
+// Work/Projects
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(2, 1fr);
+  // @media screen and (max-width: 500px) {
+  //   grid-template-columns: 1fr;
+  // }
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      //so when changing border color & opacity it uses our mixin easeOut
+      @include easeOut;
+    }
+  }
+}
+
+//Button Styles
+// using inheritance, there is no .btn class but, we are going to extend class to .btn-light & .btn-dark
+//with sass you can extend the class
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  //using inheritance to extend .btn class on both .btn-dark & .btn-light. This is a SASS feature
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  //using inheritance to extend .btn class on both .btn-dark & .btn-light. This is a SASS feature
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
 //styling footer
 #main-footer {
   text-align: center;
