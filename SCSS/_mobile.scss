@@ -46,6 +46,18 @@
       height: 150px;
     }
   }
+
+  .about-info {
+    //grid template-area very powerful, look into further.
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    // one single fractional so that everything stack on top one at a time at medium screen size.
+    grid-template-columns: 1fr;
+  }
 }
 
 //Smartphones

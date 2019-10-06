@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -55,7 +54,10 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  // height: 100%;
+  // setting up sticky footer with min-height: calc(); we are setting the main height to 100vh minus 60px which is the height of our footer.
+  //this way the footer always stays at the bottom using calc().
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -124,7 +126,9 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($color: $primary-color, $amount: 10);
+  background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
 }
+// importing media queries at the bottom cause we want them to run after everything else.
+@import "mobile";

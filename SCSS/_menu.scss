@@ -62,7 +62,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: rbga(darken($primary-color, 5), 0.9);
+    background: darken($primary-color, 5);
     list-style: none;
     //using transform: translate3d to have the nav side in from the top
     transform: translate3d(0, -100%, 0);
