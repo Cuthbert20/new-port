@@ -34,3 +34,46 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Modal event handlers
+//getting the modal
+let modal = document.getElementById("myModal");
+//get button that opens the modal
+let btn = document.getElementById("myBtn");
+//get <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+//When user clicks the button, open the modal
+btn.onclick = () => {
+  modal.style.display = "block";
+};
+//When the user clicks on the <span> (x), close the modal
+span.onclick = () => {
+  modal.style.display = "none";
+};
+//When user clicks anywehre outside of the modal, the modal closes.
+window.onclick = event => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+//head-game Modal
+let modalHead = document.getElementById("myModal-hg");
+//get button that opens the modal
+let btnHead = document.getElementById("myBtn-hg");
+//get <span> element that closes the modal
+let spanHead = document.getElementsByClassName("close-hg")[0];
+//When user clicks the button, open the modal
+btnHead.onclick = () => {
+  modalHead.style.display = "block";
+};
+//When the user clicks on the <span> (x), close the modal
+spanHead.onclick = () => {
+  modalHead.style.display = "none";
+};
+//When user clicks anywehre outside of the modal, the modal closes.
+window.onclick = event => {
+  if (event.target == modal) {
+    modalHead.style.display = "none";
+  }
+};
