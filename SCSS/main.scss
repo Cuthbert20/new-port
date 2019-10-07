@@ -119,6 +119,17 @@ main {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    h3 {
+      font-size: 1.2rem;
+      letter-spacing: 0.2rem;
+      font-weight: 400;
+    }
+
+    h6 {
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+      font-weight: 200;
+    }
   }
 }
 

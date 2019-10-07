@@ -54,7 +54,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("/dist/img/portrait.jpg");
+      background: url("https://res.cloudinary.com/cuthbert20/image/upload/v1570417916/projects%20screen%20shots/small-head-shot_wg7xxn.jpg");
       background-size: cover;
       border-radius: 50%;
       border: solid 3px #eece1a; }
@@ -180,6 +180,14 @@ main {
     background: #363535;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+    .about-info .job h3 {
+      font-size: 1.2rem;
+      letter-spacing: 0.2rem;
+      font-weight: 400; }
+    .about-info .job h6 {
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+      font-weight: 200; }
 
 .date {
   letter-spacing: 0.1rem; }
@@ -357,9 +365,10 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("/dist/img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
+      background: url("https://res.cloudinary.com/cuthbert20/image/upload/v1570417717/projects%20screen%20shots/tiny-head-shot_t27kyn.png");
+      max-width: 120px;
+      height: 150px;
+      object-fit: contain; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; } }
