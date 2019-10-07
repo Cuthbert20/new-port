@@ -197,9 +197,9 @@ main {
       transition: all 0.7s ease-out; }
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr;
   align-items: center;
   margin-top: 1rem; }
   .boxes div {
@@ -272,6 +272,10 @@ main {
   transition: all 0.7s ease-out; }
   .modal-single-img:hover {
     max-width: 600px; }
+
+.modal-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
 
 .tech {
   background: #434141;

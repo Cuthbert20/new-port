@@ -150,9 +150,12 @@ main {
 
 //Contact page
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-evenly;
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr;
   align-items: center;
   margin-top: 1rem;
 
@@ -250,6 +253,8 @@ main {
   }
 }
 .modal-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .tech {
   background: lighten($primary-color, 10);
