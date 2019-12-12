@@ -84,11 +84,11 @@ main {
 .about-info {
   display: grid;
   // use gride gap for spacing
-  grid-gap: 30px;
+  grid-gap: 20px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+    "bioimage bio bio bio"
+    "job1 job2 job3 job4";
+  grid-template-columns: repeat(4, 1fr);
 
   //nesting
   .bio-image {
@@ -113,6 +113,10 @@ main {
 
   .job-3 {
     grid-area: job3;
+  }
+
+  .job-4 {
+    grid-area: job4;
   }
 
   .job {
