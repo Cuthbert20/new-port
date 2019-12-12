@@ -52,7 +52,7 @@ span.onclick = () => {
 };
 //When user clicks anywehre outside of the modal, the modal closes.
 window.onclick = event => {
-  if (event.target == modal) {
+  if (event.target !== modal) {
     modal.style.display = "none";
   }
 };
@@ -73,7 +73,28 @@ spanHead.onclick = () => {
 };
 //When user clicks anywehre outside of the modal, the modal closes.
 window.onclick = event => {
-  if (event.target == modal) {
+  if (event.target == modalHead) {
     modalHead.style.display = "none";
+  }
+};
+
+//Utah Expungements Modal
+let modalExpung = document.getElementById("myModal-ex");
+//get button that opens the modal
+let btnExpung = document.getElementById("myBtn-ex");
+//get <span> element that closes the modal
+let spanExpung = document.getElementsByClassName("close-ex")[0];
+//When user clicks the button, open the modal
+btnExpung.onclick = () => {
+  modalExpung.style.display = "block";
+};
+//When the user clicks on the <span> (x), close the modal
+spanExpung.onclick = () => {
+  modalExpung.style.display = "none";
+};
+//When user clicks anywehre outside of the modal, the modal closes.
+window.onclick = event => {
+  if (event.target == modalExpung) {
+    modalExpung.style.display = "none";
   }
 };
